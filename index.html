@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>웹퍼블리싱 2차 과제</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style type="text/css">	
+		html {font-family: "Noto Sans", sans-serif;
+		  	font-optical-sizing: auto;
+		  	font-weight: <weight>;
+			font-style: normal;
+			font-variation-settings:"wdth" 100;
+			word-break: keep-all;}
+		body, h1, h2, h3, h4, h5, p, ol, ul, footer, video {margin: 0; padding: 0; }
+		nav{background: #FF0066; font-weight: 700; position: fixed; top: 0; left: 0; right: 0;box-shadow: 0px 0px 100px black}
+		header{background-image: url(dirty_pay_device_1.png); background-size: cover; background-position: center;}
+		header img{width: 90%; padding: 200px 0px}
+		.container {}
+		ul {list-style: none; }
+		footer ul li {color: white; padding-bottom: 10px; font-size: 20px}
+		ul li a{display: block; text-decoration: none; padding: 8px 12px; color: black}
+		ul li a:hover {background: black; color: white; transition: all 1s;}
+		div{text-align: center;}
+		.wrap{width: 800px; margin: auto;}
+		.flex{display: flex; justify-content: space-between;}
+		.nav_logo img{block-size: 20px; padding: 6px 0px}
+		.header{}
+		.who {background-image: url(store.png); background-size: cover; background-attachment: fixed; padding: 200px 0px}
+		.who h1 {font-size: 60px; color: white; text-shadow: 0px 0px 10px black;}
+		.who h2 {font-size: 300px; -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #FF0066; line-height: 1;}
+		.who h2:hover {font-size: 300px; -webkit-text-fill-color: #FF0066;
+        -webkit-text-stroke: 0px; line-height: 1; transition: all 1s}
+		.animation{background-image: url(animation.gif); background-size: cover; padding: 200px 0px}
+		.animation h1{font-size: 100px; -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #FF0066; text-align: left}
+		.animation h1 span{ -webkit-text-fill-color: white; animation: glow 2s infinite alternate linear; -webkit-text-stroke: 0px}
+		.when {background: white;}
+		.when h1{font-size: 600px; color: #FF0066;}
+		.when h1:hover {color: white; background: #FF0066; transition: all 1s;}
+		.when h1 span {font-size: 70px; color: white;}
+		.when h2 {font-size: 50px; color: black; padding-top: 200px; font-weight: 900}
+		.when h3 {font-size: 50px; color: black; padding-top: 200px; font-weight: 900}
+		.when h4 {font-size: 50px; color: black; padding-top: 200px; font-weight: 900}
+		.when h5 {font-size: 50px; color: black; padding-top: 200px; font-weight: 900}
+		.when h2:hover{background-image: url(https://media.tenor.com/MM5E-kE2nRIAAAAM/work-busy.gif); background-size: cover; color: white; text-shadow: 0px 0px 10px black}
+		.when h3:hover{background-image: url(https://y.yarn.co/ac571b2f-a685-4ebb-858a-7653ed0a6ca8_text.gif); background-size: cover; color: white; text-shadow: 0px 0px 10px black}
+		.when h4:hover{background-image: url(https://y.yarn.co/a4df5a68-9d30-454f-a277-7b5f4a3970a8_text.gif); background-size: cover; color: white; text-shadow: 0px 0px 10px black}
+		.when h5:hover{background-image: url(https://y.yarn.co/61de2412-996d-43a6-b58e-6ca7cc2eb41e_text.gif); background-size: cover; color: white; text-shadow: 0px 0px 10px black}
+		.when img{width: 100%}
+		.when_img_flex{display: flex; justify-content: space-between;}
+		.where {background-image: url(up_down.png); background-size: cover; background-attachment: fixed; padding-top: 700px; padding-bottom: 200px}
+		.where p {font-size: 140px; font-weight: bold; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #FF0066; line-height: 1.6}
+		.where p span:hover{-webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #FF0066 ; transition: all 1s;}
+		.where p span {-webkit-text-fill-color: #FF0066; -webkit-text-stroke: 0px}
+		.where img{width: 100%;}
+		.what {background: #FF0066; padding: 200px 0px}
+		.what h1 {font-size: 70px; color: black; padding-top: 20px}
+		.what h2 {font-size: 50px; color: black; padding-top: 200px}
+		.what h2:hover {background-image: url(what.gif); background-size: 80px; background-position: center;}
+		.what p {font-size: 30px; -webkit-text-fill-color: transparent; -webkit-text-stroke: 0.9px black; padding-top: 10px; line-height: 1.6; font-weight: 600}
+		.what span { -webkit-text-fill-color: white; -webkit-text-stroke: 0px; animation: glow 1s infinite alternate linear;}
+		.what img{width: 100%}
+		.how {background: white; background-image: url(interaction.png); padding: 150px 0px; background-size: cover; background-position: center; background-attachment: fixed;}
+		.how_2 {padding-bottom: 200px}
+		.how h1{font-size: 80px; color: #FF0066; padding-bottom: 20px;}
+		.how pre {font-size: 30px; color: white; line-height: 1.7; font-weight: 500px;}
+		.how pre:hover {font-size: 30px; color: #FF0066; line-height: 1.7; font-weight: 500; background: black; transition: all 1s}
+		.why {background: black; padding: 100px 0px}
+		.footer_logo img{block-size: 300px;}
+		.right_align{text-align: right;}
+		.left_align{text-align: left;}
+		.left_align_footer{text-align: left; padding-top: 68px}
+		.center_align{text-align: center;}
+
+/*		css animation*/
+		@keyframes glow{from{text-shadow: 0px 0px 0px white;}
+						to{text-shadow: 0px 0px 13px white;}}
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="wrap flex">
+			<div class="nav_logo">
+				<a href="#header">
+					<img src="nav_logo.svg">
+				</a>
+			</div>
+			<ul class="flex">
+				<li><a href="#who">Who</a></li>
+				<li><a href="#animation">When</a></li>
+				<li><a href="#where">Where</a></li>
+				<li><a href="#what">What</a></li>
+				<li><a href="#how">How</a></li>
+				<li><a href="#why">Why</a></li>
+			</ul>
+		</div>
+	</nav>
+	<header id="header">
+		<div class="wrap">
+			<img src="header_logo.svg">
+		</div>
+	</header>
+	<section class="who" id="who">
+		<div class="wrap">
+			<h1>음식점을 운영하고 계시시는</h1>
+			<h2>사장님</h2>
+		</div>
+	</section>
+	<section class="animation" id="animation">
+		<h1>이렇게 많고 많은 업무에,<br> <span>카운터까지</span> 신경 쓰기 <br>힘들지 않으신가요?</h1>
+	</section>
+	<section class="when" id="when">
+		<h1>계산<span>그놈이 문제다</span></h1>	
+		<div class="wrap">
+			<h2 class="left_align">홀이 바빠서<br> 카운터를 신경 쓸<br> 겨를이 없을 때</h2>
+			<hr>
+			<h3 class="right_align">서로 계산하겠다고<br> 말하는 손님이<br> 등장했을 때</h3>
+			<hr>
+			<h4 class="left_align">매주 오시는<br> 단골 손님의 얼굴이<br> 기억나지 않을 때</h4>
+			<hr>
+			<h5 class="center_align">결제를 안 하고<br> 나가는 손님을 미처<br> 발견하지 못했을 때</h5>
+		</div>
+		<div class="when_img_flex">
+			<img src="text.svg">
+		</div>
+	</section>
+	<section class="where" id="where">
+		<div class="wrap">
+		
+		</div>
+		<p class="center_align"><span>편리한</span> 탈부착을 통해<br> <span>장소에</span> 구애받지 않고<br> <span>어디서든</span> 사용 가능합니다</p>
+	</section>
+	<section class="what" id="what">
+		<div class="wrap">
+			<img src="dirty pay.svg">
+			<h1>5가지 기능</h1>
+			<h2 class="left_align">자동 결제 시스템 제공</h2>
+			<hr>
+			<p class="left_align">손님의 얼굴과 자리를 기억하고 있다가 결제 시에<br> <span>DIRTY PAY</span>가 자동으로 자리 번호와<br> 금액을 제시해 줍니다.</p>
+			<h2 class="left_align">더 결제하고 싶은 사람 선정</h2>
+			<hr>
+			<p class="right_align">두 명 이상의 손님이 결제를 서로 하겠다고 한다면?<br> <span>DIRTY PAY</span>가 손님의 표정을 분석해 더<br> 계산하고 싶은 사람을 지정해 줍니다.</p>
+			<h2 class="left_align">더 잘생긴 사람 카드로 결제해 주세요</h2>
+			<hr>
+			<p class="left_align">사장님, 더 이상 당황하지 마세요!<br> <span>DIRTY PAY</span>가 생각한 매력적인<br> 외모를 제시해 줍니다.</p>
+			<h2 class="left_align">단골 손님의 얼굴 기억</h2>
+			<hr>
+			<p class="right_align">서로 단골이라 주장하는 손님들 때문에 난감하신가요?<br> <span>DIRTY PAY</span>가 손님의 얼굴을 기억하고 방문<br> 횟수를 제공해 드립니다.</p>
+			<h2 class="left_align">편리한 방범 시스템 제공</h2>
+			<hr>
+			<p class="left_align">정신이 없어 미처 계산하지 못하고 나간 손님!<br> <span>DIRTY PAY</span>가 나지막이 경고해 드립니다.</p>
+		</div>
+	</section>
+	<section class="how" id="how">
+		<div class="how_2">
+			<hr>
+			<h1 class="left_align">사용자 데이터 수집</h1>
+			<div class="wrap">
+				<pre class="right_align">식사 후 결제 시점에 디바이스의 
+웹캠과 마이크가 자동으로 활성화됩니다.
+
+참석자들의 얼굴 표정, 시선, 자세 등의 
+영상 데이터와 대화 내용, 말의 속도 등의 
+음성 데이터를 실시간으로 수집합니다.</pre>
+			</div>
+		</div>
+		<div class="how_2">
+			<hr>
+			<h1 class="left_align">결제 알고리즘 적용</h1>
+			<div class="wrap">
+				<pre class="right_align">관상 및 음성 분석 결과를 종합하여 
+각 참가자에게 결제 의향 점수를 부여합니다.
+
+이전에 결제를 한 빈도, 그룹 내 역할 등 추가적인 
+요소를 고려하여 점수에 가중치를 부여합니다.
+
+가장 높은 점수를 받은 참가자가 결제자로 선정됩니다.</pre>
+			</div>
+		</div>
+		<div class="how_2">
+			<hr>
+			<h1 class="right_align">데이터 분석 및 특징 추출</h1>
+			<div class="wrap">
+				<pre class="left_align">전통적인 관상학적 요소와
+현대적인 표정 인식 기술을 결합하여,
+결제 의향이나 책임감 등을 추정합니다.
+
+참가자들의 음성 데이터를 분석하여,
+말의 톤, 볼륨, 속도 등을 평가합니다.
+
+이를 통해 결제에 대한 의지나
+망설임 등을 파악합니다.</pre>
+			</div>
+		</div>
+		<div class="how_2">
+			<hr>
+			<h1 class="right_align">결과 발표 및 피드백 제공</h1>
+			<div class="wrap">
+				<pre class="left_align">선정된 결제자를 화면에 표시하고,
+음성 안내를 통해 결과를 발표합니다.
+
+예를 들어,
+"오늘의 결제자는 김철수 님입니다!"와
+같은 메시지가 출력됩니다.
+
+분위기를 부드럽게 하기 위해,
+"가장 매력적인 분이 결제자로 선정되었습니다!"와
+같은 유머러스한 멘트를 활용할 수 있습니다.</pre>
+			</div>
+		</div>
+	</section>
+	<footer class="why" id="why">
+		<div class="wrap flex">
+			<div class="footer_logo">
+				<img src="footer.svg">
+			</div>
+			<ul class="left_align_footer">
+				<li>DIRTY PAY</li>
+				<li>고객 서비스</li>
+				<li>자주 묻는 질문</li>
+				<li>고객지원센터</li>
+			</ul>
+			<ul class="left_align_footer">
+				<li>CONTACT</li>
+				<li>Jo Jinwoo</li>
+				<li>@jhwoo_7.5</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
